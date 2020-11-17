@@ -2,22 +2,23 @@ package com.kodilla.testing.forum.statistics;
 
 public class StatisticOperator {
 
-    public ImmutableStatistics calculateAdvStatistics(Statistics statistics) {
-        double avaragePostsPerUser = 0;
-        double avarageCommentsPerUser = 0;
-        double avarageCommentPerPost = 0;
+    public StatisticsProcessor calculateAdvStatistics(Statistics statistics) {
+        double averagePostsPerUser = 0;
+        double averageCommentsPerUser = 0;
+        double averageCommentsPerPost = 0;
         if (statistics.usersNames().size() != 0) {
-            avaragePostsPerUser = (double) statistics.postsCount() / (double) statistics.usersNames().size();
-            avarageCommentsPerUser = (double) statistics.commentsCount() / (double) statistics.usersNames().size();
+            averagePostsPerUser = (double) statistics.postsCount() / (double) statistics.usersNames().size();
+            averageCommentsPerUser = (double) statistics.commentsCount() / (double) statistics.usersNames().size();
         }
         if (statistics.postsCount() != 0) {
-            avarageCommentPerPost = (double) statistics.commentsCount() / (double) statistics.postsCount();
+            averageCommentsPerPost = (double) statistics.commentsCount() / (double) statistics.postsCount();
         }
 
-        return new ImmutableStatistics(statistics.usersNames().size(), statistics.postsCount(), statistics.commentsCount(), avaragePostsPerUser, avarageCommentsPerUser, avarageCommentPerPost);
+        return new StatisticsProcessor(statistics.usersNames().size(),statistics.postsCount(),statistics.commentsCount(),averagePostsPerUser,averageCommentsPerUser,averageCommentsPerPost);
     }
 
     public void showStatistics() {
         System.out.println(toString());
     }
 }
+

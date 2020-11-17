@@ -2,6 +2,7 @@ package com.kodilla.testing.forum;
 
 import com.kodilla.testing.forum.statistics.StatisticOperator;
 import com.kodilla.testing.forum.statistics.Statistics;
+import com.kodilla.testing.forum.statistics.StatisticsProcessor;
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
@@ -11,24 +12,27 @@ import static org.mockito.Mockito.when;
 
 public class ForumStatisticsTestSuite {
 
+    public static int testcounter = 0;
+
     @BeforeAll
     public static void beforeAll() {
-        System.out.println("Tests Begin:");
+        System.out.println("Tests BEGIN");
     }
 
     @AfterAll
     public static void afterAll() {
-        System.out.println("Tests ends");
+        System.out.println("Tests ENDS");
     }
 
     @BeforeEach
     public void before() {
-        System.out.println("Test case begin");
+        testcounter ++;
+        System.out.println("Test case #" + testcounter + " begin");
     }
 
     @AfterEach
     public void after() {
-        System.out.println("Test case end");
+        System.out.println("Test case #" + testcounter + " end");
     }
 
     @Test
@@ -40,10 +44,12 @@ public class ForumStatisticsTestSuite {
         users.add("Two");
         users.add("Three");
         users.add("Four");
+
         when(statsMock.usersNames()).thenReturn(users);
         when(statsMock.postsCount()).thenReturn(0);
         when(statsMock.commentsCount()).thenReturn(20);
         operator.calculateAdvStatistics(statsMock);
+
         Assertions.assertEquals(users.size(), operator.calculateAdvStatistics(statsMock).getAmountOfUsers());
         Assertions.assertEquals(0, operator.calculateAdvStatistics(statsMock).getAmountOfPosts());
         Assertions.assertEquals(20, operator.calculateAdvStatistics(statsMock).getAmountOfComments());
@@ -62,10 +68,12 @@ public class ForumStatisticsTestSuite {
         users.add("Two");
         users.add("Three");
         users.add("Four");
+
         when(statsMock.usersNames()).thenReturn(users);
         when(statsMock.postsCount()).thenReturn(1000);
         when(statsMock.commentsCount()).thenReturn(20);
         operator.calculateAdvStatistics(statsMock);
+
         Assertions.assertEquals(users.size(), operator.calculateAdvStatistics(statsMock).getAmountOfUsers());
         Assertions.assertEquals(1000, operator.calculateAdvStatistics(statsMock).getAmountOfPosts());
         Assertions.assertEquals(20, operator.calculateAdvStatistics(statsMock).getAmountOfComments());
@@ -84,10 +92,12 @@ public class ForumStatisticsTestSuite {
         users.add("Two");
         users.add("Three");
         users.add("Four");
+
         when(statsMock.usersNames()).thenReturn(users);
         when(statsMock.postsCount()).thenReturn(10);
         when(statsMock.commentsCount()).thenReturn(0);
         operator.calculateAdvStatistics(statsMock);
+
         Assertions.assertEquals(users.size(), operator.calculateAdvStatistics(statsMock).getAmountOfUsers());
         Assertions.assertEquals(10, operator.calculateAdvStatistics(statsMock).getAmountOfPosts());
         Assertions.assertEquals(0, operator.calculateAdvStatistics(statsMock).getAmountOfComments());
@@ -106,10 +116,12 @@ public class ForumStatisticsTestSuite {
         users.add("Two");
         users.add("Three");
         users.add("Four");
+
         when(statsMock.usersNames()).thenReturn(users);
         when(statsMock.postsCount()).thenReturn(20);
         when(statsMock.commentsCount()).thenReturn(200);
         operator.calculateAdvStatistics(statsMock);
+
         Assertions.assertEquals(users.size(), operator.calculateAdvStatistics(statsMock).getAmountOfUsers());
         Assertions.assertEquals(20, operator.calculateAdvStatistics(statsMock).getAmountOfPosts());
         Assertions.assertEquals(200, operator.calculateAdvStatistics(statsMock).getAmountOfComments());
@@ -128,10 +140,12 @@ public class ForumStatisticsTestSuite {
         users.add("Two");
         users.add("Three");
         users.add("Four");
+
         when(statsMock.usersNames()).thenReturn(users);
         when(statsMock.postsCount()).thenReturn(30);
         when(statsMock.commentsCount()).thenReturn(20);
         operator.calculateAdvStatistics(statsMock);
+
         Assertions.assertEquals(users.size(), operator.calculateAdvStatistics(statsMock).getAmountOfUsers());
         Assertions.assertEquals(30, operator.calculateAdvStatistics(statsMock).getAmountOfPosts());
         Assertions.assertEquals(20, operator.calculateAdvStatistics(statsMock).getAmountOfComments());
@@ -146,10 +160,12 @@ public class ForumStatisticsTestSuite {
         Statistics statsMock = mock(Statistics.class);
         StatisticOperator operator = new StatisticOperator();
         ArrayList<String> users = new ArrayList<>();
+
         when(statsMock.usersNames()).thenReturn(users);
         when(statsMock.postsCount()).thenReturn(101);
         when(statsMock.commentsCount()).thenReturn(20);
         operator.calculateAdvStatistics(statsMock);
+
         Assertions.assertEquals(users.size(), operator.calculateAdvStatistics(statsMock).getAmountOfUsers());
         Assertions.assertEquals(101, operator.calculateAdvStatistics(statsMock).getAmountOfPosts());
         Assertions.assertEquals(20, operator.calculateAdvStatistics(statsMock).getAmountOfComments());
