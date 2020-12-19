@@ -12,7 +12,7 @@ public class OrderRequestRetriever {
         productsAvailable.put("Milk", 30);
         productsAvailable.put("Tomatoes", 40);
 
-        Producer producer = new Producer("ExtraFoodShop", "Gdańsk", productsAvailable);
+        Producer producer = new Producer("HealthyShop", "Gdańsk", productsAvailable);
 
         HashMap<String, Integer> productsOrdered = new HashMap<>();
         productsOrdered.put("Carrots", 20);
