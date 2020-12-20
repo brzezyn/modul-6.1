@@ -13,7 +13,7 @@ public class OrderProcessor {
     public OrderDto process(final OrderRequest orderRequest) {
 
         Producer producer = orderRequest.getProducer();
-        Map<String, Integer> productsAvailable = producer.getPRODUCTS();
+        Map<String, Integer> productsAvailable = producer.getProducts();
 
         boolean isOrdered = orderService.process(orderRequest, productsAvailable);
 

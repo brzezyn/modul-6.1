@@ -3,6 +3,7 @@ package com.kodilla.good.patterns.challenges.food2door;
 import java.util.Map;
 
 public class OrderRequest {
+
     private Map<String, Integer> products;
     private Producer producer;
 

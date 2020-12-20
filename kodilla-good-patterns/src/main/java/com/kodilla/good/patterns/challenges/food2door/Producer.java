@@ -4,25 +4,25 @@ import java.util.Map;
 
 public class Producer {
 
-    private final String NAME;
-    private final String ADDRESS;
-    private final Map<String,Integer> PRODUCTS;
+    private final String name;
+    private final String address;
+    private final Map<String,Integer> products;
 
-    public Producer(String NAME, String ADDRESS, Map<String, Integer> PRODUCTS) {
-        this.NAME = NAME;
-        this.ADDRESS = ADDRESS;
-        this.PRODUCTS = PRODUCTS;
+    public Producer(String name, String address, Map<String, Integer> products) {
+        this.name = name;
+        this.address = address;
+        this.products = products;
     }
 
-    public String getNAME() {
-        return NAME;
+    public String getName() {
+        return name;
     }
 
-    public String getADDRESS() {
-        return ADDRESS;
+    public String getAddress() {
+        return address;
     }
 
-    public Map<String, Integer> getPRODUCTS() {
-        return PRODUCTS;
+    public Map<String, Integer> getProducts() {
+        return products;
     }
 }
