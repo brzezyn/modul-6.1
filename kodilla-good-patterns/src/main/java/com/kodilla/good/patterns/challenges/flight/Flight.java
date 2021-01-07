@@ -1,57 +1,50 @@
 package com.kodilla.good.patterns.challenges.flight;
 
-import java.util.Optional;
+import java.time.LocalTime;
+import java.time.Duration;
 
-public final class Flight {
+import java.time.LocalTime;
+import java.time.Duration;
 
-    private final String departureAirport;
-    private final Optional<String> intermediateAirport;
-    private final String arrivalAirport;
+public class Flight {
 
-    public Flight(String departureAirport, Optional<String> intermediateAirport, String arrivalAirport) {
-        this.departureAirport = departureAirport;
-        this.intermediateAirport = intermediateAirport;
-        this.arrivalAirport = arrivalAirport;
+    private final Airport departure;
+    private final Airport arrival;
+    private final LocalTime depTime;
+    private final Duration duration;
+    private final LocalTime arrTime;
+
+    public Flight(Airport departure, Airport arrival, LocalTime depTime, Duration duration) {
+        this.departure = departure;
+        this.arrival = arrival;
+        this.depTime = depTime;
+        this.duration = duration;
+        this.arrTime = depTime.plusMinutes(duration.toMinutes());
     }
 
-    public String getDepartureAirport() {
-        return departureAirport;
+    public Airport getDeparture() {
+        return departure;
     }
 
-    public Optional<String> getIntermediateAirport() {
-        return intermediateAirport;
+    public Airport getArrival() {
+        return arrival;
     }
 
-    public String getArrivalAirport() {
-        return arrivalAirport;
+    public LocalTime getDepTime() {
+        return depTime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Flight flight = (Flight) o;
-
-        if (!departureAirport.equals(flight.departureAirport)) return false;
-        if (!intermediateAirport.equals(flight.intermediateAirport)) return false;
-        return arrivalAirport.equals(flight.arrivalAirport);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = departureAirport.hashCode();
-        result = 31 * result + intermediateAirport.hashCode();
-        result = 31 * result + arrivalAirport.hashCode();
-        return result;
+    public LocalTime getArrTime() {
+        return arrTime;
     }
 
     @Override
     public String toString() {
-        return "Flight {" +
-                "departureAirport ='" + departureAirport + '\'' +
-                ", intermediateAirport =" + intermediateAirport +
-                ", arrivalAirport ='" + arrivalAirport + '\'' +
-                '}';
+        return "Flight " +
+                " from " + departure +
+                " (" + depTime + ")" +
+                " to " + arrival +
+                " (" + arrTime + ")" +
+                " (duration " + duration.toMinutes() + " minutes)";
     }
 }
