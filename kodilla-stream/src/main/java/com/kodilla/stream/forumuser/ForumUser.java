@@ -18,18 +18,23 @@ public final class ForumUser {
         this.dateOfBirth = dateOfBirth;
         this.numberOfPosts = numberOfPosts;
     }
+
     public int getIdentifier() {
         return identifier;
     }
+
     public String getUserName() {
         return userName;
     }
+
     public char getSex() {
         return sex;
     }
+
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
+
     public int getNumberOfPosts() {
         return numberOfPosts;
     }

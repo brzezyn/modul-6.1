@@ -22,18 +22,18 @@ public class WeatherForecastTestSuite {
     private static int testCounter = 0;
 
     @BeforeAll
-    public static void beforeAllTests(){
+    public static void beforeAllTests() {
         System.out.println("This is the beginning of tests.");
     }
 
     @AfterAll
-    public static void afterAllTest(){
+    public static void afterAllTest() {
         System.out.println("All tests are finished.");
     }
 
     @BeforeEach
-    public void beforeEveryTest(){
-        testCounter ++;
+    public void beforeEveryTest() {
+        testCounter++;
         System.out.println("Test No." + testCounter + " begin.");
 
         Map<String, Double> temperaturesMap = new HashMap<>();
@@ -57,7 +57,7 @@ public class WeatherForecastTestSuite {
     }
 
     @Test
-    void testCalculateAverageWithMock(){
+    void testCalculateAverageWithMock() {
         //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         //When
@@ -68,7 +68,7 @@ public class WeatherForecastTestSuite {
     }
 
     @Test
-    void testCalculateMedianWithMock(){
+    void testCalculateMedianWithMock() {
         //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         //When

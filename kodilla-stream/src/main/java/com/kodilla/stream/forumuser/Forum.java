@@ -17,6 +17,7 @@ public final class Forum {
         theForumUserList.add(new ForumUser(073, "nelayla", 'F', LocalDate.of(1992, 12, 16), 0));
 
     }
+
     public final List<ForumUser> getUserList() {
         return new ArrayList<>(theForumUserList);
     }

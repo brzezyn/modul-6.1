@@ -13,9 +13,11 @@ public final class SimpleProduct {
     public String getProductName() {
         return productName;
     }
+
     public double getProductPrice() {
         return productPrice;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

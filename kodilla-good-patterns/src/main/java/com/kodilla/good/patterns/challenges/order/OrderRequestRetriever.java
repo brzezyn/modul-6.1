@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class OrderRequestRetriever {
 
-    public OrderRequest retrieve(){
+    public OrderRequest retrieve() {
 
         User user = new User("Arnold", "Bush", "a_bush");
         Cd cd = new Cd("Michael Buble", "Christmas", 2011, "0856");

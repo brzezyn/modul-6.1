@@ -9,12 +9,15 @@ public final class SimpleItem {
         this.product = product;
         this.quantity = quantity;
     }
+
     public SimpleProduct getProduct() {
         return product;
     }
+
     public double getQuantity() {
         return quantity;
     }
+
     public double getValue() {
         return product.getProductPrice() * quantity;
     }

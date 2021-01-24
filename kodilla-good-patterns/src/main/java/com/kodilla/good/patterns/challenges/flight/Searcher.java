@@ -49,7 +49,7 @@ public class Searcher {
                 .filter(flight -> flight.getDeparture().equals(change) && flight.getArrival().equals(arrival))
                 .forEach(resultsFromChange::add);
 
-        for(Flight first : resultsFromDeparture) {
+        for (Flight first : resultsFromDeparture) {
             resultsFromChange.stream()
                     .filter(second -> {
                         long changeTime = Duration.between(first.getArrTime(), second.getDepTime()).toMinutes();

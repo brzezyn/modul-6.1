@@ -9,10 +9,10 @@ public class WeatherForecast {
         this.temperatures = temperatures;
     }
 
-    public Map<String, Double> calculateForecast(){
+    public Map<String, Double> calculateForecast() {
         Map<String, Double> resultMap = new HashMap<>();
 
-        for (Map.Entry<String, Double> temperature: temperatures.getTemperatures().entrySet()){
+        for (Map.Entry<String, Double> temperature : temperatures.getTemperatures().entrySet()) {
 
             // adding 1 celsius degree to current value
             // as a temporary weather forecast
@@ -21,9 +21,9 @@ public class WeatherForecast {
         return resultMap;
     }
 
-    public double calculateAverage(){
+    public double calculateAverage() {
         double addedTemperatures = 0;
-        for (Map.Entry<String, Double> entry: temperatures.getTemperatures().entrySet()){
+        for (Map.Entry<String, Double> entry : temperatures.getTemperatures().entrySet()) {
             Double tempValue = entry.getValue();
             addedTemperatures += tempValue;
         }
@@ -31,9 +31,9 @@ public class WeatherForecast {
         return result;
     }
 
-    public double calculateMedian(){
-        ArrayList<Double> TempList=new ArrayList<Double>();
-        for (Map.Entry<String, Double> entry: temperatures.getTemperatures().entrySet()) {
+    public double calculateMedian() {
+        ArrayList<Double> TempList = new ArrayList<Double>();
+        for (Map.Entry<String, Double> entry : temperatures.getTemperatures().entrySet()) {
             Double tempValue = entry.getValue();
             TempList.add(tempValue);
         }

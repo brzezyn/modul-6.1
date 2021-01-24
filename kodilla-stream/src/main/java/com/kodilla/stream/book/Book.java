@@ -14,18 +14,23 @@ public final class Book {
         this.yearOfPublication = yearOfPublication;
         this.signature = signature;
     }
+
     public String getAuthor() {
         return author;
     }
+
     public String getTitle() {
         return title;
     }
+
     public int getYearOfPublication() {
         return yearOfPublication;
     }
+
     public String getSignature() {
         return signature;
     }
+
     @Override
     public String toString() {
         return "Book{" +

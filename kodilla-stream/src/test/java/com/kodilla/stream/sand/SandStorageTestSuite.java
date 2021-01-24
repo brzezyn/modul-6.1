@@ -26,6 +26,7 @@ public class SandStorageTestSuite {
         BigDecimal expectedSand = new BigDecimal("211111110903703703670");
         assertEquals(expectedSand, totalSand);
     }
+
     @Test
     void testGetSandBeansQuantityWithReduce() {
         //Given

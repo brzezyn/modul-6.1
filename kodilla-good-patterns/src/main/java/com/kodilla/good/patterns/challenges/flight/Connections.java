@@ -14,7 +14,7 @@ public class Connections {
     private List<Flight> list = new LinkedList<>();
 
     public Connections() {
-        add(gda, ldz, 6, 0,  180);
+        add(gda, ldz, 6, 0, 180);
         add(gda, ldz, 13, 45, 180);
         add(gda, ldz, 19, 30, 180);
 
@@ -32,7 +32,7 @@ public class Connections {
     @Override
     public String toString() {
         String string = "\nALL AVAILABLE FLIGHTS: ";
-        for(Flight f : list) string += "\n" + f;
+        for (Flight f : list) string += "\n" + f;
         return string;
     }
 

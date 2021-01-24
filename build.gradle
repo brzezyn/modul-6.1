@@ -1,5 +1,7 @@
 plugins {
-    id 'java'
+	id 'org.springframework.boot' version '2.3.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
 }
 
 group = 'com.kodilla'
@@ -7,13 +9,16 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-
-    }
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
 
 test {
-    useJUnitPlatform()
+	useJUnitPlatform()
 }

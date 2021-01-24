@@ -11,9 +11,11 @@ public final class Continent {
         this.countries = countries;
         this.continentName = continentName;
     }
+
     public List<Country> getCountries() {
         return countries;
     }
+
     public String getName() {
         return continentName;
     }

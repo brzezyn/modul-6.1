@@ -10,12 +10,15 @@ public class ForumComment {
         this.commentBody = commentBody;
         this.author = author;
     }
+
     public ForumPost getForumPost() {
         return forumPost;
     }
+
     public String getCommentBody() {
         return commentBody;
     }
+
     public String getAuthor() {
         return author;
     }

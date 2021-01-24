@@ -26,7 +26,7 @@ public class ForumStatisticsTestSuite {
 
     @BeforeEach
     public void before() {
-        testcounter ++;
+        testcounter++;
         System.out.println("Test case #" + testcounter + " begin");
     }
 

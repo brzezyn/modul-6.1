@@ -10,9 +10,11 @@ public class World {
     public World(List<Continent> continents) {
         this.continents = continents;
     }
+
     private List<Continent> getContinents() {
         return continents;
     }
+
     public BigDecimal getPeopleQuantity() {
         return this.getContinents().stream()
                 .flatMap(continent -> continent.getCountries().stream())

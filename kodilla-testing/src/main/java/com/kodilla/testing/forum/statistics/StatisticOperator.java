@@ -14,7 +14,7 @@ public class StatisticOperator {
             averageCommentsPerPost = (double) statistics.commentsCount() / (double) statistics.postsCount();
         }
 
-        return new StatisticsProcessor(statistics.usersNames().size(),statistics.postsCount(),statistics.commentsCount(),averagePostsPerUser,averageCommentsPerUser,averageCommentsPerPost);
+        return new StatisticsProcessor(statistics.usersNames().size(), statistics.postsCount(), statistics.commentsCount(), averagePostsPerUser, averageCommentsPerUser, averageCommentsPerPost);
     }
 
     public void showStatistics() {
