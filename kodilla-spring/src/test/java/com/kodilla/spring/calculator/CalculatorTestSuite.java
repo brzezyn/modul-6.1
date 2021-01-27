@@ -17,6 +17,7 @@ class CalculatorTestSuite {
         //Then
         // do nothing
     }
+
     @Test
     public void testSubFunction() {
         //Given
