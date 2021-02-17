@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-class KodillaApplicationTests {
+class KodillaSpringApplicationTests {
 
     @Test
     void testCircleLoadedIntoContainer() {
