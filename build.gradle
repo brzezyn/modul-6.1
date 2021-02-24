@@ -19,6 +19,9 @@ dependencies {
     }
 }
 
+bootJar {
+    mainClassName = "com.kodilla.KodillaSpringApplication"
+}
 
 test {
     useJUnitPlatform()

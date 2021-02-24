@@ -11,7 +11,7 @@ class FileReaderTestSuite {
         //Given
         FileReader fileReader = new FileReader();
         //When & Then
-        assertDoesNotThrow(() -> fileReader.readFile());
+        assertDoesNotThrow(() -> fileReader.readFile("names.txt"));
     }
 
     @Test
