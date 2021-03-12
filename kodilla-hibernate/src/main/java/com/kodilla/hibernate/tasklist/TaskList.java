@@ -32,6 +32,7 @@ public class TaskList {
     public int getId() {
         return id;
     }
+    @NotNull
     @Column(name = "LISTNAME")
     public String getListName() {
         return listName;
@@ -40,7 +41,12 @@ public class TaskList {
     public String getDescription() {
         return description;
     }
-    @OneToMany
+    @OneToMany(
+            targetEntity = Task.class,
+            mappedBy = "taskList",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
     public List<Task> getTasks() {
         return tasks;
     }
