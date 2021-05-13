@@ -37,6 +37,7 @@ public class TaskListDaoTestSuite {
         int id = readTask.get(0).getId();
         taskListDao.deleteById(id);
     }
+
     @Test
     void testTaskListDaoSaveWithTasks() {
         //GIVEN

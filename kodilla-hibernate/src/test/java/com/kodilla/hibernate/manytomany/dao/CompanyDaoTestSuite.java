@@ -54,9 +54,9 @@ class CompanyDaoTestSuite {
         assertNotEquals(0, greyMatterId);
         //CLEAN_UP
         try {
-          companyDao.deleteById(softwareMachineId);
-           companyDao.deleteById(dataMaestersId);
-           companyDao.deleteById(greyMatterId);
+            companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMaestersId);
+            companyDao.deleteById(greyMatterId);
         } catch (Exception e) {
             //do nothing
         }

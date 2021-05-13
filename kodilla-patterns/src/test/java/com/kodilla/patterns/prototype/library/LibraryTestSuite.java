@@ -24,8 +24,8 @@ public class LibraryTestSuite {
         //making a shallow copy of object board
         Library clonedLibrary = null;
         try {
-        clonedLibrary = library.shallowCopy();
-        clonedLibrary.setName("National library");
+            clonedLibrary = library.shallowCopy();
+            clonedLibrary.setName("National library");
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
@@ -33,10 +33,10 @@ public class LibraryTestSuite {
         //making a deep copy of object board
         Library deepClonedLibrary = null;
         try {
-        deepClonedLibrary = library.deepCopy();
-        deepClonedLibrary.setName("Public library");
+            deepClonedLibrary = library.deepCopy();
+            deepClonedLibrary.setName("Public library");
         } catch (CloneNotSupportedException e) {
-        System.out.println(e);
+            System.out.println(e);
         }
 
         //WHEN

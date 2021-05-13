@@ -41,7 +41,7 @@ public final class Task {
     }
 
     @NotNull
-    @Column(name ="CREATED")
+    @Column(name = "CREATED")
     public Date getCreated() {
         return created;
     }
@@ -52,7 +52,7 @@ public final class Task {
     }
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name= "TASKS_FINANCIALS_ID")
+    @JoinColumn(name = "TASKS_FINANCIALS_ID")
     public TaskFinancialDetails getTaskFinancialDetails() {
         return taskFinancialDetails;
     }

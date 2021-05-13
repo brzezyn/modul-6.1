@@ -13,8 +13,9 @@ public class TaskFactoryTestSuite {
         Task shopping = factory.makeTask(TaskFactory.SHOPPING);
         //THEN
         Assertions.assertEquals("To buy", shopping.getTaskName());
-        Assertions.assertTrue(shopping.isTaskExecuted());
+        Assertions.assertFalse(shopping.isTaskExecuted());
     }
+
     @Test
     void testFactoryPaintingList() {
         //GIVEN
@@ -25,6 +26,7 @@ public class TaskFactoryTestSuite {
         Assertions.assertEquals("Picture", painting.getTaskName());
         Assertions.assertFalse(painting.isTaskExecuted());
     }
+
     @Test
     void testFactoryDrivingList() {
         //GIVEN

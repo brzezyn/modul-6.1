@@ -38,6 +38,6 @@ public class UserTestSuite {
         System.out.println("User1 now posting: " + user1ShouldPost);
 
         //THEN
-        Assertions.assertEquals("FACEBOOK",  user1ShouldPost);
+        Assertions.assertEquals("FACEBOOK", user1ShouldPost);
     }
 }
