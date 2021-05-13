@@ -10,6 +10,12 @@ import java.util.List;
         query = "SELECT * FROM companies WHERE LEFT(company_name, 3) = :FIRSTTHREELETTERS ",
         resultClass = Company.class
 )
+@NamedQueries({
+        @NamedQuery(
+                name = "Company.retrieveCompaniesByNameFragment",
+                query = "FROM Company WHERE name LIKE '%' || :NAMEFRAGMENT ||'%' "
+        )
+})
 
 @Entity
 @Table(name = "COMPANIES")
